@@ -4,7 +4,7 @@ Working with **KEGG** in **Python** and **NetworkX**
 
 
 
-**KEGGutils** is a toolkit designed for working with the *Kyoto Encyclopedia of Genes and Genome* database in *Python* with a quick and easy to use interface: and in a single line you can download data from KEGG's REST API, organize in a graph-like format provided by *NetworkX* and immediately start exploring.
+**KEGGutils** is a toolkit designed for working with the *Kyoto Encyclopedia of Genes and Genome* database in *Python* with a quick and easy to use interface: in a single line you can download data from KEGG's REST API, organize in a graph-like format provided by *NetworkX* and immediately start exploring.
 
 *KEGGutils* is much more than just an API interface: other than a series of tools to better interface yourself with the service, it provides expanded *NetworkX* classes and methods ( totally nx-compatible ) to handle different types of data and help you better exploit underlying structures. 
 KEGGutils is easily expandable and can be immediately integrated anywhere you use *NetworkX* to process data.
@@ -37,6 +37,12 @@ To make sure KEGGutils works as it should, a few dependencies must be satisfied:
 
 note: if you use pip to install KEGGutils, it should automatically get the needed dependencies for you!
 
+note: you can create an environment with all the required dependencies using the incldued anaconda environment configurator, you just need to run
+
+`conda env create -f keggutils_env.yml` 
+
+to create a `keggutils_env` anaconda environment with all the required dependencies.
+
 ## Getting started
 
 In this repo can find four dense yet easy to follow tutorials covering most of *KEGGutils*'s functionalities and more are coming in the next future.
@@ -58,4 +64,17 @@ Here are a few useful links
 - [KEGG REST API reference page](https://www.kegg.jp/kegg/rest/keggapi.html)
 - [KEGG KGML (KEGG Markup Language) reference page](https://www.kegg.jp/kegg/xml/)
 - [Networkx Github IO](https://networkx.github.io/)
+
+
+
+## Contacts
+
+**Author:**
+
+Filippo Maria Castelli  
+castelli@lens.unifi.it  
+LENS, European Laboratory for Non-linear Spectroscopy  
+Via Nello Carrara 1  
+50019 Sesto Fiorentino (FI), Italy
+
 
