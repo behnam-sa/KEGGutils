@@ -198,11 +198,11 @@ class KEGGpathway(KEGGgraph):
         self.weblink = tree.getroot().get("link")
         self.imagelink = tree.getroot().get("image")
 
-        for entry in tree.getiterator("entry"):
+        for entry in tree.iter("entry"):
             self._parse_entry(entry)
-        for relation in tree.getiterator("relation"):
+        for relation in tree.iter("relation"):
             self._parse_relation(relation)
-        for reaction in tree.getiterator("reaction"):
+        for reaction in tree.iter("reaction"):
             self._parse_reaction(reaction)
 
         _ = self.calc_pos()
