@@ -375,8 +375,8 @@ class KEGGpathway(KEGGgraph):
         nodes_to_add = node_name.split()
         for i, node in enumerate(nodes_to_add):
             node_index = node_id
-            if i > 1:
-                node_index = node_id + "_" + str(i - 1)
+            if i > 0:
+                node_index = node_id + "_" + str(i)
                 
             if ((g_x is not None) and (g_y is not None)):
                 xy = (g_x - 10 * i, 10 * i + g_y)
