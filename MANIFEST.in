@@ -1,1 +1,1 @@
-include KEGGutils/res/org_codes.txt
+include *.txt
