@@ -28,6 +28,7 @@ setup(
     keywords = "KEGG networkx utils",
     url = "https://github.com/filippocastelli/KEGGutils",
     packages=['KEGGutils'],
+    include_package_data=True,
     install_requires= get_requirements(),
     long_description=read('README.md'),
     classifiers=[
