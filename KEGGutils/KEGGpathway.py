@@ -99,17 +99,17 @@ class KEGGpathway(KEGGgraph):
         self.other_nodes = {}
 
         self.elements = {
-            "gene": genes,
-            "reaction": reactions,
-            "relation": relations,
-            "ortholog": orthologs,
-            "map": maps,
-            "enzyme": enzymes,
-            "group": groups,
-            "brite": brite_nodes,
+            "gene": self.genes,
+            "reaction": self.reactions,
+            "relation": self.relations,
+            "ortholog": self.orthologs,
+            "map": self.maps,
+            "enzyme": self.enzymes,
+            "group": self.groups,
+            "brite": self.brite_nodes,
         }
 
-        self.element_keys = list(elements.keys())
+        self.element_keys = list(self.elements.keys())
 
         self.idcode = ""
         self.pos = dict()
