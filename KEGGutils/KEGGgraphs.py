@@ -233,21 +233,19 @@ class KEGGlinkgraph(KEGGgraph):
     target_linked_db : list
         list of databases connected to target in KEGG
     """
-
-    
-    source_db = None
-    target_db = None
-    
-    source_nodes = {}
-    target_nodes = {}
-    
-    source_linked_db = []
-    target_linked_db = []
     
     
     
     def __init__(self, *args, **kwargs):
-        
+        self.source_db = None
+        self.target_db = None
+
+        self.source_nodes = {}
+        self.target_nodes = {}
+
+        self.source_linked_db = []
+        self.target_linked_db = []
+
         if "source_db" in kwargs:
             self.source_db = kwargs.pop("source_db")
         if "target_db" in kwargs:
@@ -412,14 +410,16 @@ class KEGGchain(KEGGgraph, nx.DiGraph):
         directed version of the chain
         
     """
-    chain_dbs = []
-    chain = []
-    
-    directed_chain = nx.DiGraph()
     
 
 
     def __init__(self, *args, **kwargs):
+        self.chain_dbs = []
+        self.chain = []
+        
+        self.directed_chain = nx.DiGraph()
+
+
         if "chain" in kwargs:
             self.chain_dbs = kwargs.pop("chain")
             

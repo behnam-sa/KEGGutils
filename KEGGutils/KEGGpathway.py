@@ -84,39 +84,40 @@ class KEGGpathway(KEGGgraph):
         Returns a list of academic references to given pathway
     """
 
-    title = ""
-    labels = {}
-    reactions = {}
-    relations = {}
-    genes = {}
-    orthologs = {}
-    maps = {}
-    enzymes = {}
-    groups = {}
-    brite_nodes = {}
-    other_nodes = {}
-
-    elements = {
-        "gene": genes,
-        "reaction": reactions,
-        "relation": relations,
-        "ortholog": orthologs,
-        "map": maps,
-        "enzyme": enzymes,
-        "group": groups,
-        "brite": brite_nodes,
-    }
-
-    element_keys = list(elements.keys())
-
-    idcode = ""
-    pos = dict()
-    nodedict = {}
-    tree = None
-    kgml_file = None
-    kegg_image = []
-
     def __init__(self, *args, **kwargs):
+
+        self.title = ""
+        self.labels = {}
+        self.reactions = {}
+        self.relations = {}
+        self.genes = {}
+        self.orthologs = {}
+        self.maps = {}
+        self.enzymes = {}
+        self.groups = {}
+        self.brite_nodes = {}
+        self.other_nodes = {}
+
+        self.elements = {
+            "gene": genes,
+            "reaction": reactions,
+            "relation": relations,
+            "ortholog": orthologs,
+            "map": maps,
+            "enzyme": enzymes,
+            "group": groups,
+            "brite": brite_nodes,
+        }
+
+        self.element_keys = list(elements.keys())
+
+        self.idcode = ""
+        self.pos = dict()
+        self.nodedict = {}
+        self.tree = None
+        self.kgml_file = None
+        self.kegg_image = []
+
 
         #        self.kgml_file, args = self._find_arg_and_kick(".xml")
 
